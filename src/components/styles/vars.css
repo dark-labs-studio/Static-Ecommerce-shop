@@ -1,0 +1,22 @@
+:root {
+    /* Colors */
+      --colorBlack: #0f1011;
+      --color-black: #222;
+      --color-grey: rgb(104, 104, 104);
+      --color-white: #fff;
+      --color-accent: #f43;
+    
+    /* Spacing */
+      --sizeMaxWidth:980px;
+      --sizeHeader: 6.6rem;
+      --sizeBody: 60vh;
+    
+      --universalSpacing: 2rem;
+      --universalSpacingHalf: 1vh;
+      
+      /* Font Size */
+      --fontSmall: 13px;
+      --fontMedium: 15px;
+      --fontLarge: 17px;
+    
+    }

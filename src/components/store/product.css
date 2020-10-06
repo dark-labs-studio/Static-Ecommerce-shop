@@ -1,0 +1,272 @@
+@import '../styles/layout.css';
+@import '../styles/vars.css';
+
+#___gatsby {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.home--wrapper{
+    width: 100vw;    
+    max-width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+.product-home--container{
+    /* padding: 10vh 0; */
+    position: relative;
+    min-height:100%;
+    position:relative;
+}
+
+.product-item--wrapper{
+    width: 100vw;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    display: flex;
+}
+
+.product-item--image{
+    margin: auto;
+    width: 100vw;
+    max-width: 500px;
+}
+
+@media only screen and (max-width: 520px) {
+    .product-item--image{
+        margin: auto;
+        width: 100vw;
+    }
+}
+/* .product-image--carousel{
+    overscroll-behavior-y: contain;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+      segoe ui, arial, sans-serif;
+    position: fixed;
+    overflow: hidden;  
+} */
+
+.product-item--info {
+    text-align: center;
+    margin: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-item--title{
+
+}
+
+.product-item--price{
+    font-weight: 100;
+}
+
+.product-item--description{
+    width: 220px;
+    margin: auto;
+}
+
+.addToCart--container{
+    margin: auto;
+    width: 100vw;
+    display: flex;
+    align-content:center ;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addToCart-button--container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: none;
+}
+
+.addToCart--button{
+    border: transparent;
+}
+
+
+.checkout--wrapper{
+    background: transparent;
+    top: 0;
+    right: 10px;
+    position: fixed;
+    height: 100vh;
+    padding-left: 20px;
+}
+
+.checkout-side--wrapper {
+    position: fixed;
+    z-index: 99;
+    right: 10px;
+    top: 10px;
+    background: white;
+    height: 100vh;
+    padding: 10px;
+    text-align: center;
+}
+
+.cartWrapper {
+    background: white;
+    height: 100vh;
+}
+
+.checkout-top--button{
+    border: none;
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    right: 10px;
+}
+
+.checkout-top--button:hover,
+.checkout-top--button:focus{
+}
+
+.cart-item--button{
+    border:none;
+}
+
+.cartCheckout__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+.cart-item--button:hover,
+.cart-item--button:focus{
+    border:none;
+}
+
+.cart--item-name{
+    font-size: medium;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.cart--item-size{
+    font-weight: 100;
+    font-size: small;
+}
+.cart--item-container{
+    padding-top: 30px;
+}
+
+.cartEmpty__btn {
+    font-size: small;
+    width: 100%;
+    border: none;
+}
+.cartCheckout__btn{
+    width: 100%;
+}
+/* Footer */
+.footer--wrapper{
+    width: 100vw;
+    bottom: 0;
+    height: 60px;
+    text-align: center;
+    margin: auto;
+}
+
+.footer--text{
+    margin: auto;
+}
+
+.product-image--container {
+    padding-bottom: 10%;
+}
+
+.product-image{
+    display: inline-block;
+    width: 500px;
+    height: 600px;
+}
+
+.product-image--carousel{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 520px) {
+    .product-image--carousel{
+        width: inherit;
+        margin: auto;
+        text-align: center;
+        background-color: transparent;
+    }
+}
+
+.awssld,
+.awssld__wrapper {
+ width:100%;
+ height: 100%;
+}
+
+.awssld__content{
+    background-color: transparent !important;
+}
+
+.aws-btn {
+    --slider-height-percentage: 100%;
+    --slider-transition-duration: 700ms;
+    --organic-arrow-thickness: 4px;
+    --organic-arrow-border-radius: 0px;
+    --organic-arrow-height: 40px;
+    --organic-arrow-color: transparent;
+    --control-button-width: 40%;
+    --control-button-height: 80%;
+    --control-button-background: transparent;
+    --control-bullet-color: #f33d42;
+    --control-bullet-active-color: #cf3438;
+    --loader-bar-color: #851515;
+    --loader-bar-height: 6px;
+}
+.awssld__controls button{
+    top: 0 !important;
+    height: 500px !important;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0)!important;
+    max-width: 10% !important;
+    min-height: 500px !important;
+    min-width: 18px !important;
+    border: 0 !important;
+    padding: 0px !important;    
+    margin: 0px !important;
+}
+
+.awssld__controls button:hover{
+    top: 0 !important;
+    height: 500px !important;
+    width: 100% !important;
+    background: rgba(235, 235, 235, 0.459)!important;
+    max-width: 10% !important;
+    min-height: 500px !important;
+    min-width: 18px !important;
+    border: 0 !important;
+    padding: 0px !important;    
+    margin: 0px !important;
+}
+
+.home--container{
+    text-align: center;
+    margin: auto;
+}

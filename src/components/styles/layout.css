@@ -1,0 +1,111 @@
+@import './vars.css';
+
+@font-face {
+  font-family: 'HelveticaNowBold';
+  src:url('./font/HelveticaNowText-Bold.woff2') format('woff2'),
+      url('./font/HelveticaNowText-Bold.woff') format('woff'),
+      url('./font/HelveticaNowText-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'HelveticaNowReg';
+  src:url('./font/HelveticaNowText-Regular.woff2') format('woff2'),
+      url('./font/HelveticaNowText-Regular.woff') format('woff'),
+      url('./font/HelveticaNowText-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+html {
+  font-family: 'HelveticaNowReg';
+  font-size: var(--fontMedium);
+  line-height: var(--font-base-line-height);
+  color: var(--colorBlack);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: var(--color-white);
+  color: var(--colorBlack);
+  margin: auto;
+  width: 100vw;
+}
+
+html, body, body > div, body > div > div {
+  height: 100%;
+}
+
+h1{
+  font-size: var(--fontLarge);
+  line-height: 2;
+  letter-spacing: 0.017em;
+  font-style: normal;
+}
+
+h2{
+  font-size: var(--fontMedium);
+  font-family: 'HelveticaNowBold';
+  line-height: 35px;
+}
+h3{
+  font-size: var(--fontSmall);
+}
+p{
+  font-size: var(--fontSmall);
+  font-family: 'HelveticaNowReg';
+}
+
+ul{ 
+  list-style-type: none;
+}
+
+label {
+  font-size: var(--fontSmall);
+  font-family: 'HelveticaNowBold';
+  line-height: 35px;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  border-width: 1.5rem;
+  padding: .15rem 0.5rem;
+  width: max-content;
+  min-width: 40px;
+  min-height: 40px;
+  margin: .2rem;
+  text-decoration: none;
+  background: transparent;
+  color: var(--color-grey);
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-width: 1.5px;
+  font-weight:  bold;
+
+}
+
+button:hover,
+button:focus {
+  background: transparent;
+  color: var(--color-black);
+  border-bottom: none;
+  font-weight:  bold;
+}
+
+button:focus {
+  outline: none;
+  outline-offset: -4px;
+  border-bottom: none;
+}
+
+button:active {
+    color: var(--color-black);
+    transform: scale(0.99);
+}
