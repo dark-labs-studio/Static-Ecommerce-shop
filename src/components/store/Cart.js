@@ -105,7 +105,7 @@ const Cart = () => {
     let stripe;
 
     useEffect(() => {
-        stripe = window.Stripe("pk_live_qR8M7G88keFcqb00phdiy4QD00mLdcQN60", {
+        stripe = window.Stripe("pk_test_15qq8FRI7GA9zGTDi7PulQuF00fbAevSJ7", {
             betas: ["checkout_beta_4"]
         });
     });

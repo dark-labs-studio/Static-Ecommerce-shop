@@ -15,9 +15,9 @@ import Item from "../components/store/Item";
 import '../components/store/product.css'
 
 function Shop() {
-    // const products = data.allContentfulProducts.edges
+  // const products = data.allContentfulProducts.edges
 
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
 query HeaderQuery {
   site {
     siteMetadata {
@@ -30,17 +30,6 @@ query HeaderQuery {
     homePageImage {
       fluid(maxWidth: 800, maxHeight: 800) {
         ...GatsbyContentfulFluid_noBase64
-      }
-    }
-  }
-  allStripeSku {
-    edges {
-      node {
-        inventory {
-          quantity
-          type
-          value
-        }
       }
     }
   }
@@ -75,94 +64,85 @@ query HeaderQuery {
 }
 `);
 
-    const products = data.allContentfulProducts.nodes
-    const siteInfo = data.contentfulSiteInfo
+  const products = data.allContentfulProducts.nodes
+  const siteInfo = data.contentfulSiteInfo
 
-    return (
-        <div className={'home--wrapper'} >
-            <SEO title={data.site.siteMetadata.title} />
-            <div className={'product-home--container'}>
-                <CartProvider>
-                    <div>
-                        {products.map(({ id, title, price, description, heroImage, imageCarousel, skuVariant1, skuVariant1Name, skuVariant2, skuVariant2Name, skuVariant3, skuVariant3Name, skuVariant4, skuVariant4Name, skuVariant5, skuVariant5Name }) => (
-                            <div className={'product-container--item'} key={id}>
-                                <div className={'product-image--container'}>
-                                    <div className={'product-image--carousel'}>
-                                        <AwesomeSlider
-                                            organicArrows={false}
-                                            bullets={false}
-                                        >
-                                            <div>
-                                                <Img
-                                                    className="product-item--image"
-                                                    height={'500px'}
-                                                    fluid={imageCarousel[0].fluid}
-                                                    backgroundColor={'#eeeeee'}
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <div>
-                                                <Img
-                                                    className="product-item--image"
-                                                    height={'500px'}
-                                                    fluid={imageCarousel[1].fluid}
-                                                    backgroundColor={'#eeeeee'}
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <div>
-                                                <Img
-                                                    className="product-item--image"
-                                                    height={'500px'}
-                                                    fluid={imageCarousel[2].fluid}
-                                                    backgroundColor={'#eeeeee'}
-                                                    alt=""
-                                                />
-                                            </div>
-                                            {/* <div>
-                                                <Img
-                                                    className="product-item--image"
-                                                    height={'500px'}
-                                                    fluid={imageCarousel[3].fluid}
-                                                    backgroundColor={'#eeeeee'}
-                                                    alt=""
-                                                />
-                                            </div> */}
-                                        </AwesomeSlider>
-                                    </div>
-                                    <div>
-                                    </div>
-                                    <div className={'product-item--info'}>
-                                        <h1 className={'product-item--title'}> {title}</h1>
-                                        <div className={'product-item--description'} >{description.internal.content}</div>
-                                        <h2 className={'product-item--price'} >${price}</h2>
-                                    </div>
-                                    <div className={'addToCart--container'}>
-                                        <div className='addToCart-button--container'>
-                                            <ItemCMS
-                                                itemSKU1={skuVariant1}
-                                                itemNameSKU1={skuVariant1Name}
-                                                itemSKU2={skuVariant2}
-                                                itemNameSKU2={skuVariant2Name}
-                                                itemSKU2={skuVariant2}
-                                                itemNameSKU2={skuVariant2Name}
-                                                itemSKU3={skuVariant3}
-                                                itemNameSKU3={skuVariant3Name}
-                                                itemSKU4={skuVariant4}
-                                                itemNameSKU4={skuVariant4Name}
-                                                itemSKU5={skuVariant5}
-                                                itemNameSKU5={skuVariant5Name}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+  return (
+    <div className={'home--wrapper'} >
+      <SEO title={data.site.siteMetadata.title} />
+      <div className={'product-home--container'}>
+        <CartProvider>
+          <div>
+            {products.map(({ id, title, price, description, heroImage, imageCarousel, skuVariant1, skuVariant1Name, skuVariant2, skuVariant2Name, skuVariant3, skuVariant3Name, skuVariant4, skuVariant4Name, skuVariant5, skuVariant5Name }) => (
+              <div className={'product-container--item'} key={id}>
+                <div className={'product-image--container'}>
+                  <div className={'product-image--carousel'}>
+                    <AwesomeSlider
+                      organicArrows={false}
+                      bullets={false}
+                    >
+                      <div>
+                        <Img
+                          className="product-item--image"
+                          height={'500px'}
+                          fluid={imageCarousel[0].fluid}
+                          backgroundColor={'#eeeeee'}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <Img
+                          className="product-item--image"
+                          height={'500px'}
+                          fluid={imageCarousel[1].fluid}
+                          backgroundColor={'#eeeeee'}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <Img
+                          className="product-item--image"
+                          height={'500px'}
+                          fluid={imageCarousel[2].fluid}
+                          backgroundColor={'#eeeeee'}
+                          alt=""
+                        />
+                      </div>
+                    </AwesomeSlider>
+                  </div>
+                  <div>
+                  </div>
+                  <div className={'product-item--info'}>
+                    <h1 className={'product-item--title'}> {title}</h1>
+                    <div className={'product-item--description'} >{description.internal.content}</div>
+                    <h2 className={'product-item--price'} >${price}</h2>
+                  </div>
+                  <div className={'addToCart--container'}>
+                    <div className='addToCart-button--container'>
+                      <ItemCMS
+                        itemSKU1={skuVariant1}
+                        itemNameSKU1={skuVariant1Name}
+                        itemSKU2={skuVariant2}
+                        itemNameSKU2={skuVariant2Name}
+                        itemSKU2={skuVariant2}
+                        itemNameSKU2={skuVariant2Name}
+                        itemSKU3={skuVariant3}
+                        itemNameSKU3={skuVariant3Name}
+                        itemSKU4={skuVariant4}
+                        itemNameSKU4={skuVariant4Name}
+                        itemSKU5={skuVariant5}
+                        itemNameSKU5={skuVariant5Name}
+                      />
                     </div>
-                    <Cart />
-                </CartProvider>
-            </div>
-        </div >
-    )
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <Cart />
+        </CartProvider>
+      </div>
+    </div >
+  )
 }
 export default Shop

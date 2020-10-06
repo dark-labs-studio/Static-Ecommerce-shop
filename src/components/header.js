@@ -5,7 +5,6 @@ import '../components/header.css'
 function Header(props) {
   return (
     <div className={'header-wrapper'}>
-
       <ul className={'header-nav--container'}>
         <li ><Link className={'header-nav--item'} to='/'>Home</Link></li>
         <li ><Link className={'header-nav--item'} to='/submit'>Submit</Link></li>
